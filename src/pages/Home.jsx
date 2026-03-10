@@ -1,6 +1,6 @@
 import React from 'react'
 import FoodCard from '../components/FoodCard'
-import { foodData } from '../data/food'
+import { foodData } from '../data/foods'
 
 const Home = () => {
   return (
