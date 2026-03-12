@@ -7,6 +7,7 @@ const FoodCard = ({ food }) => {
         <img src={food.image} alt={food. name} />
         <h3>{food.name}</h3>
         <p>{food.price}</p>
+        <button> Add to cart </button>
     </div>
     </div>
     
