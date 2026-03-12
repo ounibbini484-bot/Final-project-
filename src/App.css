@@ -1,0 +1,44 @@
+.navbar {
+    display: flex  ;
+    color: blue;
+    align-items: center;
+    padding: 1rem 5% ;
+    background: orange;
+    position: sticky;
+}
+.nav-links{
+    display: flex;
+    gap: 1.5;
+    align-items: var(--primary);
+
+}
+
+
+.card img {
+  width: 10px ;
+  height: 20 px ;
+
+}
+.card h3{
+     font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    border: none;
+    flex: grow 1;
+} 
+.card price {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    border: none;
+    flex: grow 1;
+}
+
+backround {
+    color: orange;
+
+}
+.card button{
+     width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: red;
+}
