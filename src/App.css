@@ -41,4 +41,15 @@ backround {
   height: 100px;
   border-radius: 50%;
   color: red;
+  cursor: pointer;
+}
+.card hoover{
+display: flex;
+}
+.card h4{
+        font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    border: none;
+    flex: grow 1;
+
 }
