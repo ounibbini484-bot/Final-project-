@@ -39,9 +39,8 @@
 }
 
 .card img {
-  width: 10px ;
-  height: 20 px ;
-
+  width: 100%;
+  height: auto;
 }
 .card h3{
      font-family: Arial, Helvetica, sans-serif;

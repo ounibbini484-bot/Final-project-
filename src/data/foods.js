@@ -43,24 +43,38 @@ export const foodData = [
      name :"Chicken beryani",
         price:40.00,
         
-        image:"https://foxeslovelemons.com/wp-content/uploads/2023/06/Chicken-Shawarma-8.jpg", 
-        description:"https://ministryofcurry.com/wp-content/uploads/2024/06/chicken-biryani-5.jpg"
+        image:"https://authenticroyal.com/recipes/hyderabadi-chicken-biryani/", 
+        description:"A rich and aromatic basmati rice dish layered with tender, perfectly spiced chicken and slow-cooked with traditional herbs and fragrant spices. Every bite is full of deep flavor and comforting warmth, making it a true favorite for biryani lovers."
     
 },
 {
     id:7,
     name :"Pepperoni pizza",
     price:50.00,
-    image:"https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8YUdObEwyaG1aQzh4TlRrMk9EWXlOVGM0TmpreE1DNXFjR2N8MmYwYzQ4YTg0MTgzNmVjYTZkMWZkZWZmMDdlMWFlMjRhOGIxMTQ2MTZkNDk4ZDU3ZjlkNDk2MzMzNDA5OWY3OA.jpg",
+    image:'https://atsloanestable.com/wp-content/uploads/2023/06/new-york-style-pizza2.jpg',
     description:"The pizza comes with our finest pepperoni,cheese and tomato sause on coal"
 },
 {
     id:8,
     name:"margherita pizza",
     price:40.00,
-    image:"tps://www.rakijagrill.com/wp-content/uploads/2020/07/Margherita-.jpg",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2LSIII0l5cnGOlRXJDvYUv9b5xOtWcP7KXcLj7KQR-OtDjysyVax4XlZfqN2LK4Q6Ok4X16EXiTjZ2yHCe4WaJDc-pXUihzXKdonObvy7g&s=10",
     description:"the pizza comes with tomamto suase and cheese served with a sode of gralic sause"
 
+},
+{
+    id:9,
+    name:"tom yum soup",
+    price: 40.00,
+    image: "https://hot-thai-kitchen.com/wp-content/uploads/2013/03/tom-yum-goong-blog.jpg",
+     description:"A bold and aromatic Thai soup made with fresh herbs, lemongrass, lime, and chili, simmered with tender shrimp and mushrooms. Its perfect balance of spicy, sour, and savory flavors creates a refreshing and unforgettable taste in every spoonful."
+},
+{
+id :10,
+name:"Chocolate brownie",
+price:35.00,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFezt_UZPzWl6O5jDat3xWh57SPzV80y3DwQ&s",
+discription:"A rich and indulgent chocolate brownie baked to perfection with a soft, fudgy center and a slightly crisp top. Deep chocolate flavor in every bite makes it the perfect sweet treat to finish your meal. 🍫"
 }
 
 ]
