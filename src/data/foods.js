@@ -74,7 +74,7 @@ id :10,
 name:"Chocolate brownie",
 price:35.00,
 image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFezt_UZPzWl6O5jDat3xWh57SPzV80y3DwQ&s",
-discription:"A rich and indulgent chocolate brownie baked to perfection with a soft, fudgy center and a slightly crisp top. Deep chocolate flavor in every bite makes it the perfect sweet treat to finish your meal. 🍫"
+ description:"A rich and indulgent chocolate brownie baked to perfection with a soft, fudgy center and a slightly crisp top. Deep chocolate flavor in every bite makes it the perfect sweet treat to finish your meal. 🍫"
 }
 
 ]
