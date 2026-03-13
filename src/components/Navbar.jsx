@@ -1,18 +1,16 @@
-// import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-//import { CartContext } from '../context/CartContext.jsx'
 
+import { Link } from 'react-router-dom'
+import '../App.css'
 const NavBar = ()=> {
-  //const { cartItems } = useContext(CartContext)
+
    return (
-    <nav name ="navbar">
+    <nav className ="navbar">
      <h2 className='logo'>
-     <Link to = "/">Home</Link>
+     <Link to = "/">Food Ordering App</Link>
 </h2> 
 <div className="nav-links">
-  <Link to = "/"> Ordering food</Link>
-
-  {/* Cart{itemCount >0 &&<span name = "cart-count">{itemCount}</span>} */}
+  <Link to = "/">Menu</Link>
+  <Link to = "/cart">Cart</Link>
 
 </div>
 

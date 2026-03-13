@@ -1,18 +1,42 @@
+
+
 .navbar {
-    display: flex  ;
-    color: blue;
+    display: flex;
     align-items: center;
+    justify-content: space-between; /*controls how items are aligned horizontally inside a flex or a grid*/
     padding: 1rem 5% ;
-    background: orange;
+    background: rgba(169, 133, 133, 0.85);
     position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.logo a{
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: var(--primary);
+}
+
 .nav-links{
     display: flex;
     gap: 1.5;
-    align-items: var(--primary);
+    align-items: center
+}
+
+.nav-links a{
+    display: flex;
+    gap: 1.5rem;
 
 }
 
+.nav-links a:hover{
+    display: flex;
+    gap: 1.5rem;
+    color: var(--primary);
+
+}
 
 .card img {
   width: 10px ;
@@ -32,10 +56,6 @@
     flex: grow 1;
 }
 
-backround {
-    color: orange;
-
-}
 .card button{
      width: 100px;
   height: 100px;
