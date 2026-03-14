@@ -17,7 +17,7 @@ export const foodData = [
     },
     {
         id :3,
-        name :"diminight shrimp",
+        name :"Diminight shrimp",
         price : 40.00,
         image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-WitOPDr__uVUWPzl9A5sf8UN4Yhq6hZEA&s',
         description :'Often imitated, never duplicated. Enough said.'
@@ -56,7 +56,7 @@ export const foodData = [
 },
 {
     id:8,
-    name:"margherita pizza",
+    name:"Margherita pizza",
     price:40.00,
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2LSIII0l5cnGOlRXJDvYUv9b5xOtWcP7KXcLj7KQR-OtDjysyVax4XlZfqN2LK4Q6Ok4X16EXiTjZ2yHCe4WaJDc-pXUihzXKdonObvy7g&s=10",
     description:"the pizza comes with tomamto suase and cheese served with a sode of gralic sause"
@@ -64,7 +64,7 @@ export const foodData = [
 },
 {
     id:9,
-    name:"tom yum soup",
+    name:"Tom yum soup",
     price: 40.00,
     image: "https://hot-thai-kitchen.com/wp-content/uploads/2013/03/tom-yum-goong-blog.jpg",
      description:"A bold and aromatic Thai soup made with fresh herbs, lemongrass, lime, and chili, simmered with tender shrimp and mushrooms. Its perfect balance of spicy, sour, and savory flavors creates a refreshing and unforgettable taste in every spoonful."
