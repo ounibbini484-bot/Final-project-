@@ -25,6 +25,7 @@
     align-items: center
 }
 
+
 .nav-links a{
     display: flex;
     gap: 1.5rem;
@@ -118,4 +119,15 @@ display: flex;
     border-radius: 50%;
     font-size: 0.8rem;
     font-weight: 700;
+}
+.navbar{
+    color: blue;
+    display:  flex;
+    align-items: center;
+
+}
+.navbar className{
+    display: flex;
+    align-items: center;
+    color: blue;
 }
