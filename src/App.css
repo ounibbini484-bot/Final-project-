@@ -1,9 +1,8 @@
-/* ============================Navbar CSS================================== */
+/* ============================ Navbar CSS ================================== */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*controls how items are aligned horizontally inside a flex or a grid*/
     padding: 1rem 5%;
     background: rgba(169, 133, 133, 0.85);
     position: sticky;
@@ -13,24 +12,19 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
 .nav-links {
     display: flex;
-    gap: 1.5;
-    align-items: center
+    gap: 1.5rem; /* fixed */
+    align-items: center; /* fixed */
 }
 
 .nav-links a {
     display: flex;
     gap: 1.5rem;
-
 }
 
 .nav-links a:hover {
-    display: flex;
-    gap: 1.5rem;
     color: var(--primary);
-
 }
 
 .logo a {
@@ -46,7 +40,6 @@
     gap: 5px;
 }
 
-
 .cart-badge {
     color: white;
     width: 22px;
@@ -59,7 +52,14 @@
     font-weight: 700;
 }
 
-/* ==================================Food Card============================================= */
+/* ============================ Food Card ================================== */
+.card {
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 .card img {
     width: 100%;
@@ -73,20 +73,22 @@
     font-family: Arial, Helvetica, sans-serif;
     color: green;
     font-size: 1.25rem;
-    margin-bottom: 10 px;
+    margin-bottom: 10px; /* fixed */
+}
 
+.card h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
 }
 
 .card .price {
     font-family: Arial, Helvetica, sans-serif;
     color: blue;
     border: none;
-    flex: grow 1;
+    flex-grow: 1; /* fixed */
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 15px;
-
-
 }
 
 .card button {
@@ -97,70 +99,50 @@
     cursor: pointer;
     padding: 12px;
     border: none;
-
 }
 
-.card hoover {
-    display: flex;
+.card:hover {
+    display: flex; /* fixed */
 }
 
-.card h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: blue;
-    border: none;
-    flex: grow 1;
-
-}
-
-.card {
-    padding: 15px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    height: 100%
-}
-
-
-/* ==================================Home CSS============================================================ */
+/* ============================ Home ================================== */
 .food-container {
     display: grid;
     gap: 30px;
     padding: 40px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-
 }
 
-/* ====================================Cart Item CSS================================================== */
-
-.cart-item{
+/* ============================ Cart Item ================================== */
+.cart-item {
     display: flex;
     align-items: center;
     padding: 15px 20px;
     border-radius: 8px;
     gap: 20px;
 }
-.cart-item-image{
+
+.cart-item-image {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
-
 }
 
-.cart-item-details{
-    flex-grow: 1; /*item will grow to fill the empty space*/
+.cart-item-details {
+    flex-grow: 1;
 }
 
-.cart-item-details h4{
+.cart-item-details h4 {
     font-size: 1.1rem;
 }
 
-.cart-item-details p{
+.cart-item-details p {
     font-weight: 600;
     margin-top: 5px;
 }
 
-.cart-item-actions{
+.cart-item-actions {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -169,7 +151,7 @@
     border-radius: 20px;
 }
 
-.qty-btn{
+.qty-btn {
     background: none;
     border: none;
     font-size: 1.2rem;
@@ -182,52 +164,75 @@
     align-items: center;
 }
 
-.qty{
+.qty {
     font-weight: 600;
     min-width: 20px;
     text-align: center;
 }
 
-.remove-btn{
-    background-color: #ffe3e3;
-    color: #dc3545;
+/* fixed button styles (no nesting) */
+.plus-btn {
+    color: green;
     border: none;
     padding: 8px 15px;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
 }
-.remove-btn:hover{
+
+.minus-btn {
+    color: red;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: #ffe3e3;
+    color: blue;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
     background: #dc3545;
     color: white;
 }
 
-/* ==========================================Cart CSS================================================== */
-
-.cart-container{
+/* ============================ Cart ================================== */
+.cart-container {
     max-width: 800px;
     margin-bottom: 50px;
 }
 
-.empty-cart{
+.empty-cart {
     text-align: center;
     padding: 50px 20px;
     border-radius: 12px;
-    
-
 }
 
-.cart-items{
+.cart-items {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
 }
 
-.cart-summary{
+.cart-summary {
     padding: 25px;
     border-radius: 8px;
-    /* box-shadow: ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.empty-card { /* fixed */
+    color: blue;
     display: flex;
     justify-content: space-between;
     align-items: center;

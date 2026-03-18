@@ -8,14 +8,22 @@ const CartItem = ({item}) => {
         <p>{item.price}</p>
       </div>
       <div className="cart-item-actions">
-        <button className="qty-btn">-</button>
-        <span className="qty">{item.quantity}</span>
-        <button className="qty-btn">+</button>
+       <button className="qty-btn"
+       onAuxClick={()=>onDecrease(item.id)}>-
+       </button>
+       <span className="qty">{item.quantity}</span>
+        <button className="qty-btn"
+       onAuxClick={()=>onIncrease(item.id)}>
+        +
+       </button>
+
+
       </div>
 
-      <button className="remove-btn">Remove</button>
+
+      <button className="remove-btn" onAuxClick={()=>removeItem(item.id)}>Remove </button>
     </div>
-  )
-}
+  );
+};
 
 export default CartItem
