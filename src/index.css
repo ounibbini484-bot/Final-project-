@@ -34,3 +34,16 @@ a {
 ul{
   list-style: none;
 }
+
+.btn{
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #ff5e3a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}

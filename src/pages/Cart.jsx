@@ -7,27 +7,25 @@ const Cart = () => {
   const { cartItems } = useContext(CartContext)
 
   return (
-    <div>
-      <h1>Your Cart</h1>
+    <div className='cart-container containter'>
+      <h1 className='page-title'>Your Cart</h1>
 
       {cartItems.length === 0 ? (
-        <div>
-          <p>Your cart is empty.</p>
+        <div className='empty-cart'>
           <Link to="/" className='btn'>Browse Menu</Link>
         </div>
       ) : (
-        <div>
-          <div>
+        <>
+          <div className='cart-items'>
             {cartItems.map(item => (
               <CartItem key={item.id} item={item} />
             ))}
           </div>
 
-          <div>
-            <button> +</button>
-             <button> - </button>
+          <div className="cart-summary">
+            <h2>Total amount: 65 AED</h2>
           </div>
-        </div>
+        </>
       )}
     </div>
   )
