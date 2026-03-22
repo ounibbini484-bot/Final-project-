@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const CartItem = ({item}) => {
+  const {updateQuantity} = useContext(CartContext)
   return (
     <div className="cart-item">
       <img src={item.image} alt={item.name} className='cart-item-image'/>
@@ -9,11 +12,11 @@ const CartItem = ({item}) => {
       </div>
       <div className="cart-item-actions">
        <button className="qty-btn"
-       onAuxClick={()=>onDecrease(item.id)}>-
+       onClick={()=>updateQuantity(item.id, -1)}>-
        </button>
        <span className="qty">{item.quantity}</span>
         <button className="qty-btn"
-       onAuxClick={()=>onIncrease(item.id)}>
+       onClick={()=>updateQuantity(item.id, +1)}>
         +
        </button>
 
