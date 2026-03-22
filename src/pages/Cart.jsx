@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import CartItem from '../components/CartItem'
 
 const Cart = () => {
-  const { cartItems } = useContext(CartContext)
+  const { cartItems, totalAmount } = useContext(CartContext)
 
   return (
     <div className='cart-container containter'>
@@ -23,7 +23,7 @@ const Cart = () => {
           </div>
 
           <div className="cart-summary">
-            <h2>Total amount: 65 AED</h2>
+            <h2>Total amount: {totalAmount} AED</h2>
           </div>
         </>
       )}
