@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartItem = ({item}) => {
-  const {updateQuantity} = useContext(CartContext)
+  const {updateQuantity, removeFromCart} = useContext(CartContext)
   return (
     <div className="cart-item">
       <img src={item.image} alt={item.name} className='cart-item-image'/>
@@ -22,9 +22,7 @@ const CartItem = ({item}) => {
 
 
       </div>
-
-
-      <button className="remove-btn" onAuxClick={()=>removeItem(item.id)}>Remove </button>
+      <button className="remove-btn" onClick={()=>removeFromCart(item.id)}>Remove</button>
     </div>
   );
 };
