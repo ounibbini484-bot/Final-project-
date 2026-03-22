@@ -24,6 +24,7 @@ const Cart = () => {
 
           <div className="cart-summary">
             <h2>Total amount: {totalAmount} AED</h2>
+            <Link to="/checkout">Proceed to Checkout</Link>
           </div>
         </>
       )}

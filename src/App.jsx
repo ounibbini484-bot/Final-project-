@@ -3,6 +3,7 @@ import Navbar  from "./components/Navbar"
 import { Routes,Route } from 'react-router-dom'
 import Cart from "./pages/Cart"
 import CartItem from "./components/CartItem"
+import Checkout from "./pages/Checkout"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={ <Home/> }/>
       <Route path="/cart" element={ <Cart/> }/>
       <Route path="/cartitem" element={ <CartItem/> }/>
+      <Route path="/checkout" element={ <Checkout/> }/>
 
     </Routes>
   

@@ -237,3 +237,41 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/* ============================ Checkout ================================== */
+.checkout-container{
+    max-width: 800px;
+    
+}
+.checkout-card{
+    max-width: 60px;
+    margin: 0 auto 50px;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 94, 58, 0.2);
+}
+
+

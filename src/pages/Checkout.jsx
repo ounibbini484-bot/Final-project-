@@ -5,21 +5,22 @@ const Checkout = () => {
   const { clearCart, totalAmount } = useContext(CartContext);
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
-  const [subminted, setsubmited] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e) => {
-    e.PreventDef();
-    setsubmited(true);
+    e.preventDefault();
+    setSubmitted(true);
     clearCart();
   };
 
   return (
-    <div className="Check-container">
-      <div className="Ceckout-card">
-        <h1 className="Title">Checkouut</h1>
-        {!subminted ? (
-          <form onSubmit={handleSubmit} className="checkout-from">
-            <div className="Checkout from ">
-              <label> Full name</label>
+    <div className="checkout-container container">
+      <div className="checkout-card">
+        <h1 className="page-title">Checkout</h1>
+        {!submitted ? (
+          <form onSubmit={handleSubmit} className="checkout-form">
+            <div className="form-group">
+              <label>Name</label>
               <input
                 type="text"
                 value={name}
@@ -28,8 +29,8 @@ const Checkout = () => {
                 placeholder="Mohmed Ali"
               />
             </div>
-            <div className="Checkout from ">
-              <label> Address</label>
+            <div className="form-group">
+              <label>Delivery Address</label>
               <textarea
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -38,25 +39,21 @@ const Checkout = () => {
                 placeholder="123 street"
               ></textarea>
             </div>
-            <div className="Summery">
-              <h3>Total to pay {totalAmount}AED</h3>
+            <div className="checkout-summary">
+              <h3>Total to pay: {totalAmount} AED</h3>
             </div>
             <button type="submit" className="btn submit-btn">
-              {" "}
-              Conferm order
+              Confirm Order
             </button>
           </form>
         ) : (
           <>
-            <div className="Messge-sucsess"></div>
-            <div className="Sucess icon">✅</div>
-            <h2> Order placed </h2>
-            <p>
-              {" "}
-              Thank you for your order<strong>{address}</strong>
-            </p>
+            <div className="success-message"></div>
+            <div className="sucess-icon">✅</div>
+            <h2>Order Placed Successfully</h2>
+            <p>Thank you for your order<strong>{name}</strong>.</p>
             <p>Your delicious food is on its way to:</p>
-            <p className="Dilvery - Address">{address}</p>
+            <p className="delivery-address">{address}</p>
           </>
         )}
       </div>
