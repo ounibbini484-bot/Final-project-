@@ -47,7 +47,7 @@ export const foodData = [
     name: "Chicken beryani",
     price: 40.0,
 
-    image: "https://authenticroyal.com/recipes/hyderabadi-chicken-biryani/",
+    image: "https://easyindiancookbook.com/wp-content/uploads/2023/06/chicken-biryani.jpg",
     description:
       "A rich and aromatic basmati rice dish layered with tender, perfectly spiced chicken and slow-cooked with traditional herbs and fragrant spices. Every bite is full of deep flavor and comforting warmth, making it a true favorite for biryani lovers.",
   },
