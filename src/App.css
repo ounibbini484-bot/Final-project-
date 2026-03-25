@@ -411,3 +411,17 @@ transition: transform 0.3s ease;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255,94,58,0.3);
 }
+
+.chatbot-window{
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin:bottom right ;
+}

@@ -12,6 +12,15 @@ const Chatbot = () => {
 <line x1="6" y1="6" x2="18" y2="18"></line>
 </svg>)}
       </button>
+      {isOpen && (<div className='chatbot-window'>
+        <div className='chatbot-header'>
+           <span>Support Chat </span> 
+           <button className='chatbot-close-btn'onClick={toggleChat}></button>
+          </div>
+          <div className='chatbot-messges'> </div>
+      </div>)}
+      
+
     </div>
   )
 }
