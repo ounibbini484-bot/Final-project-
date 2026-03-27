@@ -499,3 +499,63 @@ transition: transform 0.3s ease;
     transition: all 0.2s;
     font-weight: 600;
 }
+
+.chat-message{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px ;
+    margin-bottom: 10px;
+}
+.chat-avatar{
+    width: 32px;
+    height: 32px;
+    border: 50%;
+    object-fit: cover;
+}
+
+.chat-message.user{
+    justify-content: flex-end;
+}
+
+/* Empty Cart Styling */
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.cart-empty img {
+  width: 180px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.cart-empty h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.cart-empty p {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.cart-empty .shop-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cart-empty .shop-btn:hover {
+  background: #0056b3;
+}
