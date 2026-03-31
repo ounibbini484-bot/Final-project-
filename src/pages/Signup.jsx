@@ -88,7 +88,7 @@ const Signup = () => {
           <button type='submit' className='auth-btn'>Sign Up</button>
         </form>
 
-        <p>Already have an account ? <Link to="/login">Login</Link></p>
+        <p className="auth-link">Already have an account ? <Link to="/login">Login</Link></p>
       </div>
     </div>
   )

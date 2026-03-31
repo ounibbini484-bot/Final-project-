@@ -662,4 +662,18 @@ transition: transform 0.3s ease;
     transform: translateY(-2px);
      box-shadow: 0 8px 25px rgba(255, 94, 58, 0.5);
 }
+
+.auth-link{
+    color: #ff5e3a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover{
+    color: #d83145;
     
+    text-decoration: underline;
+
+}
+
