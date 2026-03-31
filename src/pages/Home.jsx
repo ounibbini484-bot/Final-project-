@@ -6,15 +6,9 @@ import { foodData } from '../data/foods'
 const Home = () => {
   return (
     <div className="container">
-      
-      <div className="home-header">
-        <h1 className="page-title">Explore Our Menu</h1>
 
-        <div className="auth-actions">
-          <Link to="/login" className="login-btn">Login</Link>
-          <Link to="/signup" className="signup-btn">Sign Up</Link>
-        </div>
-      </div>
+        <h1 className="page-title">Explore Our Menu</h1>
+     
 
       <div className="food-container">
         {foodData.map((food) => (
