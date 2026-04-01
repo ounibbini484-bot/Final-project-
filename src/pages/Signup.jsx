@@ -85,7 +85,9 @@ const Signup = () => {
             required
              />
           </div>
-          <button type='submit' className='auth-btn'>Sign Up</button>
+          <Link to = "/login">
+                          <button className="auth-btn">Sign Up</button>
+                          </Link> 
         </form>
 
         <p className="auth-link">Already have an account ? <Link to="/login">Login</Link></p>
