@@ -1,7 +1,7 @@
 export const foodData = [
   {
     id: 1,
-    name: "Jalapeno bueger",
+    name: "Jalapeño Burger",
     price: 64.5,
     image:
       "https://images.deliveryhero.io/image/talabat/MenuItems/JALEPENO_BURGER_637235343750091320.jpg",
