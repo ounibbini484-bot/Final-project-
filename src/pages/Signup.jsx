@@ -1,30 +1,50 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios';
+
 
 const Signup = () => {
 
   const [formData, setFormData] = useState({
-    name:'',
-    email:'',
-    password:'',
-    confirmPassword:''
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
   })
 
   const navigate = useNavigate();
 
-  const handleChange = (e)=>{
-    setFormData({...formData, [e.target.name]: e.target.value})
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords don't match");
       return
     }
 
-    console.log('Signup attemt:', formData);
-    navigate('/login')
+    // console.log('Signup attemt:', formData);
+    // navigate('/login')
+
+    try {
+      const response = await axios.post("http://localhost:8081/auth/signup", {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+
+      });
+
+      console.log("Signup successful: ", response.data);
+      navigate("/login");
+
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred during signup");
+
+    }
   }
 
 
@@ -37,57 +57,57 @@ const Signup = () => {
           <div className='form-group'>
             <label htmlFor="name">Full Name</label>
 
-            <input type="text" 
-            placeholder='Enter your full name'
-            id='name'
-            name='name'
-            value={formData.name}
-            onChange={handleChange}
-            required />
+            <input type="text"
+              placeholder='Enter your full name'
+              id='name'
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
+              required />
 
-            </div>
+          </div>
 
-            <div className='form-group'>
+          <div className='form-group'>
 
             <label htmlFor="name">Email</label>
 
-            <input type="email" 
-            placeholder='Enter your email' 
-            id='email'
-            name='email'
-            value={formData.email}
-            onChange={handleChange}
-            required />
+            <input type="email"
+              placeholder='Enter your email'
+              id='email'
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+              required />
 
-             </div>
+          </div>
 
-             <div className='form-group'>
+          <div className='form-group'>
             <label htmlFor="password">Password</label>
-            <input type="password" 
-            placeholder='Create your password'
-            id='password'
-            name='password'
-            value={formData.password}
-            onChange={handleChange}
-            required
-             />
-              </div>
+            <input type="password"
+              placeholder='Create your password'
+              id='password'
+              name='password'
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-              <div className='form-group'>
+          <div className='form-group'>
 
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password"
-            placeholder='Confirm your password'
-            id='confirmPassword'
-            name='confirmPassword'
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-             />
+              placeholder='Confirm your password'
+              id='confirmPassword'
+              name='confirmPassword'
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <Link to = "/login">
-                          <button className="auth-btn">Sign Up</button>
-                          </Link> 
+
+          <button type='submit' className="auth-btn">Sign Up</button>
+
         </form>
 
         <p className="auth-link">Already have an account ? <Link to="/login">Login</Link></p>
