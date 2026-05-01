@@ -7,7 +7,12 @@ const NavBar = () => {
   const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
   const location = useLocation();
 
-  if(location.pathname === "/login" || location.pathname === "/signup"){
+  if (
+    location.pathname === "/login" || 
+    location.pathname === "/signup" ||
+    location.pathname === "/admin-login" ||
+    location.pathname === "/admin-signup"
+  ) {
     return null;
   }
 
@@ -18,6 +23,9 @@ const NavBar = () => {
       </h2>
       <div className="nav-links">
         <Link to="/home">Menu</Link>
+        {localStorage.getItem('role') === 'admin' && (
+          <Link to="/add-food">Add Food</Link>
+        )}
         <Link to="/cart" className="cart-link">
         Cart {itemCount > 0 && <span className="cart-badge">{itemCount}</span>}
         </Link>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-const Login = () => {
+const AdminLogin = () => {
 
   const [formData, setFormData] = useState({
     email: '',
@@ -18,9 +18,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // console.log('Login attemt:', formData);
-    // navigate('/')
-
     try {
       const response = await axios.post('http://localhost:8081/auth/login', {
         email: formData.email,
@@ -28,13 +25,13 @@ const Login = () => {
       });
 
       if (response.status === 200) {
-        console.log('Login successful:', response.data);
+        console.log('Admin Login successful:', response.data);
         localStorage.setItem('token', response.data.token);
-        localStorage.setItem('role', 'user');
+        localStorage.setItem('role', 'admin');
         navigate('/home');
       }
       else {
-        console.log('Login failed');
+        console.log('Admin Login failed');
         alert('Some problem: ' + response.data.message);
       }
     } catch (error) {
@@ -42,7 +39,7 @@ const Login = () => {
       if (error.response && error.response.data && error.response.data.message) {
         alert(error.response.data.message);
       } else {
-        alert('An error occurred during login');
+        alert('An error occurred during admin login');
       }
     }
   }
@@ -50,24 +47,20 @@ const Login = () => {
   return (
     <div className='auth-container'>
       <div className="auth-card">
-        <h2>Welcome Back</h2>
-        <p>Login to your account to continue</p>
+        <h2>Admin Login</h2>
+        <p>Login to your admin account to manage food</p>
 
         <form className='auth-form' onSubmit={handleSubmit}>
 
-
           <div className='form-group'>
-
             <label htmlFor="name">Email</label>
-
             <input type="email"
-              placeholder='Enter your email'
+              placeholder='Enter your admin email'
               id='email'
               name='email'
               value={formData.email}
               onChange={handleChange}
               required />
-
           </div>
 
           <div className='form-group'>
@@ -82,22 +75,18 @@ const Login = () => {
             />
           </div>
 
-
-          <button type='submit' className="auth-btn">Login</button>
-
+          <button type='submit' className="auth-btn">Login as Admin</button>
 
         </form>
-        <p className="auth-link">Don't have an account ?
-          <Link to="/signup"> Sign Up</Link>
+        <p className="auth-link">Don't have an admin account?
+          <Link to="/admin-signup"> Sign Up</Link>
         </p>
-        <p className="auth-link">Are you an admin?
-          <Link to="/admin-login"> Admin Login</Link>
+        <p className="auth-link">Are you a regular user?
+          <Link to="/login"> User Login</Link>
         </p>
       </div>
     </div>
   )
 }
 
-export default Login
-
-// <p>Already have an account ? <Link to="/login">Login</Link></p>
+export default AdminLogin

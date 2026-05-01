@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-
-const Signup = () => {
-
+const AdminSignup = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,38 +23,34 @@ const Signup = () => {
       return
     }
 
-    // console.log('Signup attemt:', formData);
-    // navigate('/login')
-
     try {
-      const response = await axios.post("http://localhost:8081/auth/signup", {
+      const response = await axios.post("http://localhost:8081/auth/admin-signup", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
-
       });
 
-      console.log("Signup successful: ", response.data);
+      console.log("Admin Signup successful: ", response.data);
       navigate("/login");
-
 
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred during signup");
-
+      if (error.response && error.response.data && error.response.data.message) {
+        alert(error.response.data.message);
+      } else {
+        alert("An error occurred during admin signup");
+      }
     }
   }
-
 
   return (
     <div className='auth-container'>
       <div className='auth-card'>
-        <h2>Create Account</h2>
-        <p>Sign up to get started</p>
+        <h2>Create Admin Account</h2>
+        <p>Sign up to manage food items</p>
         <form className='auth-form' onSubmit={handleSubmit}>
           <div className='form-group'>
             <label htmlFor="name">Full Name</label>
-
             <input type="text"
               placeholder='Enter your full name'
               id='name'
@@ -64,21 +58,17 @@ const Signup = () => {
               value={formData.name}
               onChange={handleChange}
               required />
-
           </div>
 
           <div className='form-group'>
-
-            <label htmlFor="name">Email</label>
-
+            <label htmlFor="email">Email</label>
             <input type="email"
-              placeholder='Enter your email'
+              placeholder='Enter your admin email'
               id='email'
               name='email'
               value={formData.email}
               onChange={handleChange}
               required />
-
           </div>
 
           <div className='form-group'>
@@ -94,7 +84,6 @@ const Signup = () => {
           </div>
 
           <div className='form-group'>
-
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password"
               placeholder='Confirm your password'
@@ -106,16 +95,13 @@ const Signup = () => {
             />
           </div>
 
-          <button type='submit' className="auth-btn">Sign Up</button>
-
+          <button type='submit' className="auth-btn">Sign Up as Admin</button>
         </form>
-
-        <p className="auth-link">Already have an account ? <Link to="/login">Login</Link></p>
-        <p className="auth-link">Are you an admin? <Link to="/admin-signup">Admin Signup</Link></p>
+        <p className="auth-link">Already have an admin account? <Link to="/admin-login">Admin Login</Link></p>
+        <p className="auth-link">Are you a regular user? <Link to="/signup">User Signup</Link></p>
       </div>
     </div>
   )
 }
 
-export default Signup
-//  https://teams.microsoft.com/meet/4669012942578?p=zHocWlzpRMtgq0ntYk
+export default AdminSignup;

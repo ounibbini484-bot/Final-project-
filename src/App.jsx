@@ -9,6 +9,10 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 
 
+import AdminSignup from "./pages/AdminSignup"
+import AdminLogin from "./pages/AdminLogin"
+import AddFood from "./pages/AddFood"
+
 function App() {
  
 
@@ -24,9 +28,9 @@ function App() {
       <Route path="/checkout" element={ <Checkout/> }/>
       <Route path="/login" element={ <Login/> }/>
       <Route path="/signup" element={ <Signup/> }/>
-
-
-
+      <Route path="/admin-login" element={ <AdminLogin/> }/>
+      <Route path="/admin-signup" element={ <AdminSignup/> }/>
+      <Route path="/add-food" element={ <AddFood/> }/>
 
     </Routes>
      <Chatbot/>
