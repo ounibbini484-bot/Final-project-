@@ -38,6 +38,10 @@ const Home = () => {
     fetchFood();
   }, [navigate]);
 
+  const handleDelete = (deletedId) => {
+    setFoodData(currentData => currentData.filter(food => (food.id || food._id) !== deletedId));
+  };
+
   return (
     <div className="container">
 
@@ -46,7 +50,7 @@ const Home = () => {
 
       <div className="food-container">
         {foodData.map((food) => (
-          <FoodCard key={food.id || food._id} food={food} />
+          <FoodCard key={food.id || food._id} food={food} onDelete={handleDelete} />
         ))}
       </div>
 
